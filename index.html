@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BudgetWise personal budget management application">
+    <title>BudgetWise | Personal Budget Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="registerPage" class="auth-page">
+        <div class="auth-container">
+
+            <div class="auth-brand-panel">
+                <div class="brand">
+                    <div class="brand-icon">₹</div>
+                    <span>BudgetWise</span>
+                </div>
+
+                <div class="brand-content">
+                    <span class="eyebrow">PERSONAL FINANCE</span>
+                    <h1>Take control of your money with confidence.</h1>
+                    <p>Track your income, manage your expenses and understand your monthly financial balance in one simple place.</p>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Simple monthly budget tracking</p>
+                        </div>
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Secure personal account experience</p>
+                        </div>
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Clear financial summaries</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-bottom">
+                    <div>
+                        <strong>100%</strong>
+                        <span>Simple</span>
+                    </div>
+                    <div>
+                        <strong>6+</strong>
+                        <span>Budget categories</span>
+                    </div>
+                    <div>
+                        <strong>24/7</strong>
+                        <span>Access</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-form-panel">
+                <div class="mobile-brand">
+                    <div class="brand-icon">₹</div>
+                    <span>BudgetWise</span>
+                </div>
+
+                <div class="form-content">
+                    <div class="form-heading">
+                        <span class="small-label">GET STARTED</span>
+                        <h2>Create your account</h2>
+                        <p>Start managing your monthly budget today.</p>
+                    </div>
+
+                    <form id="registerForm">
+
+                        <div class="field">
+                            <label for="registerUsername">Username</label>
+                            <div class="input-box">
+                                <span class="input-symbol">◉</span>
+                                <input type="text" id="registerUsername" placeholder="Enter your username" autocomplete="username">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="registerEmail">Email address</label>
+                            <div class="input-box">
+                                <span class="input-symbol">@</span>
+                                <input type="email" id="registerEmail" placeholder="Enter your email" autocomplete="email">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="registerPassword">Password</label>
+                            <div class="input-box">
+                                <span class="input-symbol">●</span>
+                                <input type="password" id="registerPassword" placeholder="Minimum 6 characters" autocomplete="new-password">
+                                <button type="button" class="password-btn" onclick="togglePassword('registerPassword', this)">Show</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="primary-btn">
+                            Create Account
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                    <div class="form-switch">
+                        Already have an account?
+                        <button type="button" onclick="showLogin()">Sign in</button>
+                    </div>
+
+                    <p class="form-footer">Your personal budget, made simple.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="loginPage" class="auth-page">
+        <div class="auth-container">
+
+            <div class="auth-brand-panel">
+                <div class="brand">
+                    <div class="brand-icon">₹</div>
+                    <span>BudgetWise</span>
+                </div>
+
+                <div class="brand-content">
+                    <span class="eyebrow">WELCOME BACK</span>
+                    <h1>Your finances deserve a clearer picture.</h1>
+                    <p>Log in to access your saved budget, review your expenses and keep track of your financial balance.</p>
+
+                    <div class="benefits">
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Your budget stays saved locally</p>
+                        </div>
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Quick monthly calculations</p>
+                        </div>
+                        <div class="benefit">
+                            <span>✓</span>
+                            <p>Clean and easy dashboard</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="brand-bottom">
+                    <div>
+                        <strong>Easy</strong>
+                        <span>To use</span>
+                    </div>
+                    <div>
+                        <strong>Fast</strong>
+                        <span>Calculations</span>
+                    </div>
+                    <div>
+                        <strong>Clear</strong>
+                        <span>Insights</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="auth-form-panel">
+                <div class="mobile-brand">
+                    <div class="brand-icon">₹</div>
+                    <span>BudgetWise</span>
+                </div>
+
+                <div class="form-content">
+                    <div class="form-heading">
+                        <span class="small-label">WELCOME BACK</span>
+                        <h2>Sign in to BudgetWise</h2>
+                        <p>Access your personal budget dashboard.</p>
+                    </div>
+
+                    <form id="loginForm">
+
+                        <div class="field">
+                            <label for="loginUsername">Username or email</label>
+                            <div class="input-box">
+                                <span class="input-symbol">◉</span>
+                                <input type="text" id="loginUsername" placeholder="Enter username or email" autocomplete="username">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="loginPassword">Password</label>
+                            <div class="input-box">
+                                <span class="input-symbol">●</span>
+                                <input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+                                <button type="button" class="password-btn" onclick="togglePassword('loginPassword', this)">Show</button>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="primary-btn">
+                            Sign In
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                    <div class="form-switch">
+                        Don't have an account?
+                        <button type="button" onclick="showRegister()">Create account</button>
+                    </div>
+
+                    <p class="form-footer">Manage your money with confidence.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="budgetPage" class="dashboard-page">
+
+        <header class="dashboard-header">
+            <div class="dashboard-nav">
+
+                <div class="dashboard-brand">
+                    <div class="dashboard-brand-icon">₹</div>
+                    <span>BudgetWise</span>
+                </div>
+
+                <div class="dashboard-user-area">
+                    <div class="user-info">
+                        <div class="user-avatar" id="userInitial">K</div>
+                        <div>
+                            <strong id="navUsername">User</strong>
+                            <span>Personal account</span>
+                        </div>
+                    </div>
+
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+
+            </div>
+        </header>
+
+
+        <section class="dashboard-hero">
+            <div class="hero-inner">
+                <span class="hero-label">PERSONAL BUDGET DASHBOARD</span>
+                <h1>Manage your money with clarity.</h1>
+                <p>Plan your monthly income and expenses and understand where your money goes.</p>
+            </div>
+
+            <div class="hero-shape hero-shape-one"></div>
+            <div class="hero-shape hero-shape-two"></div>
+        </section>
+
+
+        <main class="dashboard-container">
+
+            <div class="profile-card">
+                <div class="profile-main">
+                    <div class="profile-avatar" id="profileInitial">K</div>
+
+                    <div>
+                        <span class="profile-caption">WELCOME BACK</span>
+                        <h2>Hello, <span id="displayUsername">User</span></h2>
+                        <p id="displayEmail">email@example.com</p>
+                    </div>
+                </div>
+
+                <div class="account-status">
+                    <span></span>
+                    Active account
+                </div>
+            </div>
+
+
+            <div class="summary-grid">
+
+                <div class="summary-card">
+                    <div class="summary-icon income-icon">↑</div>
+                    <div>
+                        <span>Monthly Income</span>
+                        <strong id="summaryIncome">—</strong>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon expense-icon">↓</div>
+                    <div>
+                        <span>Total Expenses</span>
+                        <strong id="summaryExpense">—</strong>
+                    </div>
+                </div>
+
+                <div class="summary-card">
+                    <div class="summary-icon balance-icon">₹</div>
+                    <div>
+                        <span>Remaining Balance</span>
+                        <strong id="summaryBalance">—</strong>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <section class="calculator-card">
+
+                <div class="calculator-heading">
+                    <div>
+                        <span class="section-label">MONTHLY PLANNER</span>
+                        <h2>Budget Calculator</h2>
+                        <p>Enter your monthly income and expenses to see your financial balance.</p>
+                    </div>
+
+                    <div class="calculator-symbol">₹</div>
+                </div>
+
+
+                <form id="budgetForm">
+
+                    <div class="budget-section">
+                        <div class="section-heading">
+                            <span>01</span>
+                            <div>
+                                <h3>Monthly Income</h3>
+                                <p>Enter your total income for this month.</p>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label for="income">Total Income</label>
+                            <div class="money-input">
+                                <span>₹</span>
+                                <input type="number" id="income" placeholder="Enter amount" min="0">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="divider"></div>
+
+
+                    <div class="budget-section">
+                        <div class="section-heading">
+                            <span>02</span>
+                            <div>
+                                <h3>Monthly Expenses</h3>
+                                <p>Add your regular monthly expenses.</p>
+                            </div>
+                        </div>
+
+                        <div class="expense-grid">
+
+                            <div class="input-group">
+                                <label for="rent">Rent</label>
+                                <div class="money-input">
+                                    <span>₹</span>
+                                    <input type="number" id="rent" placeholder="Enter amount" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="groceries">Groceries</label>
+                                <div class="money-input">
+                                    <span>₹</span>
+                                    <input type="number" id="groceries" placeholder="Enter amount" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="transportation">Transportation</label>
+                                <div class="money-input">
+                                    <span>₹</span>
+                                    <input type="number" id="transportation" placeholder="Enter amount" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="entertainment">Entertainment</label>
+                                <div class="money-input">
+                                    <span>₹</span>
+                                    <input type="number" id="entertainment" placeholder="Enter amount" min="0">
+                                </div>
+                            </div>
+
+                            <div class="input-group">
+                                <label for="other">Other Expenses</label>
+                                <div class="money-input">
+                                    <span>₹</span>
+                                    <input type="number" id="other" placeholder="Enter amount" min="0">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="calculator-action">
+                        <button type="submit" class="calculate-btn">
+                            Calculate My Budget
+                            <span>→</span>
+                        </button>
+                    </div>
+
+                </form>
+
+
+                <div id="result"></div>
+
+
+                <div class="tip-card">
+                    <div class="tip-icon">i</div>
+                    <div>
+                        <strong>Budget tip</strong>
+                        <p>Try to keep your monthly expenses below your income so you can build savings consistently.</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <footer class="dashboard-footer">
+            <p>© 2026 BudgetWise. Personal budget management made simple.</p>
+        </footer>
+
+    </section>
+
+
+    <div id="notification" class="notification">
+        <div id="notificationIcon" class="notification-icon">✓</div>
+
+        <div class="notification-content">
+            <strong id="notificationTitle">Success</strong>
+            <p id="notificationMessage">Operation completed successfully.</p>
+        </div>
+
+        <button class="notification-close" onclick="closeNotification()">×</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
